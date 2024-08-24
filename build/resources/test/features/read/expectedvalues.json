@@ -1,0 +1,11 @@
+{
+  "firstname": "Angela",
+  "lastname": "Serna",
+  "totalprice": 1212,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": '#ignore',
+    "checkout": '#ignore'
+  },
+  "additionalneeds": "Breakfast"
+}

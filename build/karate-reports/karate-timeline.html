@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-2","id":1},{"content":"pool-1-thread-4","id":2},{"content":"pool-1-thread-3","id":3},{"content":"pool-1-thread-5","id":4},{"content":"pool-1-thread-1","id":5}];
+var items = [{"id":1,"group":1,"content":"features\/delete\/deleteBooking[1:8]","start":1724449948723,"end":1724449951949,"title":"features\/delete\/deleteBooking[1:8] 16:52:28.723-16:52:31.949 Delete booking restful booker herokuapp by Id"},{"id":2,"group":2,"content":"features\/read\/getAllBooking[1:6]","start":1724449948723,"end":1724449950882,"title":"features\/read\/getAllBooking[1:6] 16:52:28.723-16:52:30.882 Read booking list restful booker herokuapp"},{"id":3,"group":3,"content":"features\/ping\/apiWorking[1:6]","start":1724449948723,"end":1724449950662,"title":"features\/ping\/apiWorking[1:6] 16:52:28.723-16:52:30.662 Validate that the api is working"},{"id":4,"group":3,"content":"features\/update\/updateBooking[1:8]","start":1724449950672,"end":1724449952250,"title":"features\/update\/updateBooking[1:8] 16:52:30.672-16:52:32.250 Update booking restful booker herokuapp"},{"id":5,"group":4,"content":"features\/read\/getBookingId[1:9]","start":1724449948723,"end":1724449952016,"title":"features\/read\/getBookingId[1:9] 16:52:28.723-16:52:32.016 Read booking detail restful booker herokuapp by Id"},{"id":6,"group":5,"content":"features\/create\/createBooking[1:8]","start":1724449948723,"end":1724449951172,"title":"features\/create\/createBooking[1:8] 16:52:28.723-16:52:31.172 Create booking restful booker herokuapp"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

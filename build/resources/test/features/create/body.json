@@ -1,0 +1,11 @@
+{
+  "firstname" : "Angela",
+  "lastname" : "Serna",
+  "totalprice" : 1212,
+  "depositpaid" : true,
+  "bookingdates" : {
+    "checkin" : "2024-08-21",
+    "checkout" : "2024-08-27"
+  },
+  "additionalneeds" : "Breakfast"
+}
